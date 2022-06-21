@@ -1,0 +1,13 @@
+{%extends 'webcollecte/main.html'%}
+{%block content%}
+<a class="add" href="ajout/"> Ajouter un capteur </a>
+<h1> Liste de tous les capteurs </h1>
+ <ol>
+        {% for l in Liste %}
+            <li class="liste"> {{l}} </br>
+                <a href="./affiche/{{l.id}}"> Détails </a> <a href="delete/{{l.id}}"> Effacer </a>
+                <a href="update/{{l.id}}"> Mettre à jour </a>
+            </li>
+        {%endfor%}
+    </ol>
+{%endblock%}

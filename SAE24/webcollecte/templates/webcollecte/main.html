@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load static %}
+    <link rel="stylesheet" href="{%static 'webcollecte/main.css'%}">
+    <meta charset="UTF-8">
+    <title>{% block title %} Capteurs {%endblock%} </title>
+</head>
+<body>
+    <header id="header">
+            {% block header %}
+            <h1>Gestion des capteurs</h1>
+            <nav>
+                <a href="/Capteur1/">Capteur 1</a>
+                <a href="/Capteur2">Capteur 2</a>
+            </nav>
+            {% endblock %}
+    </header>
+    <div id="content">
+        {% block content %}
+        <h1> Données </h1>
+        {% endblock %}
+    </div>
+    <footer>
+        <h3><a href="/webcollecte/"> Retour </a></h3>
+    </footer>
+
+</body>
+</html>
